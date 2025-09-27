@@ -1,0 +1,70 @@
+@model IEnumerable<Pc2_Progra.Models.Inmueble>
+@{
+    ViewData["Title"] = "Catálogo de Inmuebles";
+}
+
+<h2>Catálogo de Inmuebles</h2>
+
+<form method="get" asp-action="Index">
+    <div class="row mb-3">
+        <div class="col"><input type="text" name="ciudad" class="form-control" placeholder="Ciudad" /></div>
+        <div class="col">
+            <select name="tipo" class="form-control">
+                <option value="">-- Tipo --</option>
+                <option>Departamento</option>
+                <option>Casa</option>
+                <option>Oficina</option>
+                <option>Local</option>
+            </select>
+        </div>
+        <div class="col"><input type="number" name="precioMin" class="form-control" placeholder="Precio Min" /></div>
+        <div class="col"><input type="number" name="precioMax" class="form-control" placeholder="Precio Max" /></div>
+        <div class="col"><input type="number" name="dormitorios" class="form-control" placeholder="Dormitorios >=" /></div>
+        <div class="col"><button type="submit" class="btn btn-primary">Filtrar</button></div>
+    </div>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @Html.ValidationSummary(true)
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Ciudad</th>
+            <th>Tipo</th>
+            <th>Dormitorios</th>
+            <th>Precio</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Titulo</td>
+            <td>@item.Ciudad</td>
+            <td>@item.Tipo</td>
+            <td>@item.Dormitorios</td>
+            <td>@item.Precio.ToString("C")</td>
+            <td><a asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-info btn-sm">Ver detalle</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<!-- Paginación -->
+<nav>
+    <ul class="pagination">
+        @for (int i = 1; i <= (int)ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(i == (int)ViewBag.Page ? "active" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+            </li>
+        }
+    </ul>
+</nav>

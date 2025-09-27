@@ -1,0 +1,18 @@
+@model Pc2_Progra.Models.Inmueble
+@{
+    ViewData["Title"] = "Detalle del Inmueble";
+}
+
+<h2>@Model.Titulo</h2>
+
+<p><strong>Código:</strong> @Model.Codigo</p>
+<p><strong>Ciudad:</strong> @Model.Ciudad</p>
+<p><strong>Dirección:</strong> @Model.Direccion</p>
+<p><strong>Tipo:</strong> @Model.Tipo</p>
+<p><strong>Dormitorios:</strong> @Model.Dormitorios</p>
+<p><strong>Baños:</strong> @Model.Banos</p>
+<p><strong>Metros²:</strong> @Model.MetrosCuadrados</p>
+<p><strong>Precio:</strong> @Model.Precio.ToString("C")</p>
+
+<a asp-action="Index" class="btn btn-secondary">Volver al catálogo</a>
+<a asp-controller="Visitas" asp-action="Create" asp-route-inmuebleId="@Model.Id" class="btn btn-primary">Agendar visita</a>

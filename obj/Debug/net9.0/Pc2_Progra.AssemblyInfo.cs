@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pc2_Progra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1209536982bd59835e0ade3efb9b2ab526d8310")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pc2_Progra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pc2_Progra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

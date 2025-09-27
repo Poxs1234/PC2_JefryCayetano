@@ -290,3 +290,4 @@ C:\Users\Jefry\Desktop\Pc2_Progra\obj\Debug\net9.0\refint\Pc2_Progra.dll
 C:\Users\Jefry\Desktop\Pc2_Progra\obj\Debug\net9.0\Pc2_Progra.pdb
 C:\Users\Jefry\Desktop\Pc2_Progra\obj\Debug\net9.0\Pc2_Progra.genruntimeconfig.cache
 C:\Users\Jefry\Desktop\Pc2_Progra\obj\Debug\net9.0\ref\Pc2_Progra.dll
+C:\Users\Jefry\Desktop\Pc2_Progra\obj\Debug\net9.0\Pc2_Progra.sourcelink.json
